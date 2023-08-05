@@ -83,7 +83,7 @@ ggplot(state_summaries, aes(x = reorder(state, -100*(death_rate)),
 
 
 ```
-![image](https://github.com/Eugenefut19/Eugene-Portfolio/assets/134546229/b733d2dd-044b-438a-80ae-b943ae2c51a6)
+![image](https://github.com/Eugenefut19/Jail-Deaths-in-America/assets/134546229/780c8dbb-326e-4edc-a440-6277ba73fed8)
 
 This graph shows that Nevada had the highest average death rate over the course of the data collection, shown by my ordered bar graph. This bar graph gives me some information on how different states’ prisons compare to each other and which might be safer. Overall we see that Nevada, Oklahoma, Maryland, and DC have the highest death rates for inmates; and then Wisconsin, Kentucky, Iowa, Alabama, and South Dakota. This shows us that Wisconsin is actually in the 5 states with lower death rates compared to the other 45. 
 
@@ -102,7 +102,7 @@ ggplot(state_summaries, aes(x = avg_inmate_pop, y = death_rate)) +
   ylab("Average Yearly Inmate Death Rate") +
   ggtitle("Linear Model Death Rate vs Population")
 ```
-![image](https://github.com/Eugenefut19/Eugene-Portfolio/assets/134546229/86bbef92-b155-4538-aa92-4c1c0595f653)
+![image](https://github.com/Eugenefut19/Jail-Deaths-in-America/assets/134546229/563232ff-9b93-45d4-b38c-0eaa2c089514)
 
 ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 ```{r}
@@ -115,7 +115,7 @@ state_summaries %>%
   xlab("Average Yearly Inmate Population") +
   ggtitle("Residual plot to check the linear model")
 ```
-![image](https://github.com/Eugenefut19/Eugene-Portfolio/assets/134546229/90dc9647-6c10-4fbf-9c2a-37b545b526c1)
+![image](https://github.com/Eugenefut19/Jail-Deaths-in-America/assets/134546229/03432efc-0abe-4c7a-b137-c3662abe8efb)
 
 Although this linear model shows a slight negative correlation between inmate population and death rate, as well as having a good residual plot with consistent variance and mean of zero, the test to see if the slope is significantly different than zero was not able to reject the null (p = 0.7601, t-test, df = 42). So we are able to say that there is no clear evidence that death rate increases or decreases with an change in inmate population. This tells us that differences in death rate are not necessarily due to differences in inmate populations but are actually more likely due to how different states treat prisoners and the conditions they live in. 
 
